@@ -1,5 +1,6 @@
 import Courses from "../components/Courses";
 import Hero from "../components/Hero";
+import Owner from "../components/Owner";
 
 export default function Home() {
   return (
@@ -203,6 +204,7 @@ export default function Home() {
       </section>
 
       <Courses />
+      <Owner />
     </section>
   );
 }
