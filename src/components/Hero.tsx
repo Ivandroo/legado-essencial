@@ -66,12 +66,7 @@ function Hero() {
               conhecimento em resultados.
             </p>
             <div className="flex gap-4">
-              <a
-                href="#cursos"
-                className="flex w-fit items-center px-4 py-2 text-paper border border-ink-soft rounded-radius"
-              >
-                Ver cursos
-              </a>
+              
               <Link to={whatsapp}>
                 <button
                   ref={buttonRef}
@@ -87,6 +82,13 @@ function Hero() {
                   Falar conosco
                 </button>
               </Link>
+
+              <a
+                href="#cursos"
+                className="flex w-fit items-center px-4 py-2 text-paper border border-paper rounded-radius"
+              >
+                Ver cursos
+              </a>
             </div>
           </div>
           <div className="w-full sm:relative h-65 border border-line-dark rounded-radius flex items-center justify-center bg-linear-to-b from-[rgba(46,107,255,0.08)] to-transparent overflow-hidden">
