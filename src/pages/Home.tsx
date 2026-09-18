@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom";
 import Courses from "../components/Courses";
-import Hero from "../components/Hero";
+import Hero, { whatsapp } from "../components/Hero";
 import Owner from "../components/Owner";
 
 export default function Home() {
@@ -204,7 +205,19 @@ export default function Home() {
       </section>
 
       <Courses />
+      
       <Owner />
+
+      <section className="bg-blue flex flex-col items-center justify-center px-8 py-14">
+        <div className="flex flex-col gap-3 text-center">
+            <h1 className="text-[clamp(30px,4vw,46px)] text-ink font-anto">Pronto para dar o próximo passo?</h1>
+            <p className="text-paper">Fale connosco para saber mais sobre as próximas turmas, parcerias ou como levar o Centro à sua instituição.</p>
+            <div className="flex w-full flex-wrap gap-5 items-center justify-center mt-5">
+                <Link to="/contacto" className="flex items-center justify-center py-3 px-6 bg-ink text-paper font-medium"> Ir para a Página de contacto </Link>
+                <Link to={whatsapp} className="flex items-center justify-center py-3 px-6 text-paper border border-paper font-medium"> Falar no Whatsapp </Link>
+            </div>
+        </div>
+      </section>
     </section>
   );
 }

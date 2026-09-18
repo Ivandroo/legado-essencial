@@ -6,7 +6,7 @@ export default function Owner() {
             <div className="">
                 <img src="/francisco.png" alt="" />
             </div>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 max-w-2xl">
                 <span className="text-blue font-medium text-xs">Quem criou o Centro</span>
                 <h1 className="text-[clamp(30px,4vw,46px)] text-paper font-anto">Francisco Chinami Chitende</h1>
                 <p className="text-blue font-medium">Profissional de Comunicação · Empreendedor</p>
