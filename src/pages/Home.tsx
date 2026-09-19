@@ -1,14 +1,28 @@
+import { useState, useEffect } from "react";
+import Loading from "../components/Loading";
+
 import { Link } from "react-router-dom";
 import Courses from "../components/Courses";
 import Hero, { whatsapp } from "../components/Hero";
 import Owner from "../components/Owner";
 
 export default function Home() {
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 2000);
+  }, []);
+
+  if (loading) {
+    return <Loading fullPage={true} />;
+  }
+  
   return (
     <section>
       <Hero />
       <section className="bg-paper py-14 px-8 border-b border-b-line">
-        <div className="flex flex-col items-center justify-center gap-4 sm:items-start sm:grid sm:grid-cols-2 md:grid-cols-4">
+        <div className="flex flex-col items-center justify-center gap-4 max-w-6xl my-0 mx-auto sm:items-start sm:grid sm:grid-cols-2 md:grid-cols-4">
           <div className="flex flex-col w-full text-center gap-3 ">
             <span
               className="font-anto text-5xl text-blue-dim block"
@@ -38,7 +52,7 @@ export default function Home() {
       </section>
 
       <section className="bg-paper py-14 px-8" id="sobre">
-        <div className="flex flex-col gap-4 sm:grid sm:grid-cols-2">
+        <div className="flex flex-col max-w-6xl my-0 mx-auto gap-4 sm:grid sm:grid-cols-2">
           <div className="flex flex-col gap-3">
             <div className="text-xs text-blue-dim font-bold">
               Sobre o Centro
@@ -88,7 +102,7 @@ export default function Home() {
       </section>
 
       <section className="bg-paper-dim flex flex-col px-8 py-14" id="modelo">
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 max-w-6xl my-0 mx-auto">
           <div className="flex flex-col gap-3 max-w-2xl">
             <div className="text-xs text-blue-dim font-bold">Como funcionamos</div>
             <h2 className="text-[clamp(30px,4vw,46px)] text-ink font-anto">Um modelo que cresce em duas fases.</h2>
@@ -125,7 +139,7 @@ export default function Home() {
       </section>
 
       <section className="bg-paper flex flex-col px-8 py-14" id="valores">
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col w-full gap-6 max-w-6xl my-0 mx-auto">
           <div className="flex flex-col gap-3 max-w-2xl">
             <div className="text-xs text-blue-dim font-bold">O que nos guia</div>
             <h2 className="text-[clamp(30px,4vw,46px)] text-ink font-anto">Valores que aplicamos, não só que escrevemos.</h2>
@@ -136,9 +150,8 @@ export default function Home() {
                 <span className="w-2 h-2 rounded-full shrink-0 bg-blue"></span>
                 <h3 className="font-bold">Excelência</h3>
               </div>
-              <p>
-                Procuramos fazer cada formação com qualidade, do primeiro ao
-                último módulo.
+              <p className="max-w-[60ch] text-ink-soft">
+                Procuramos fazer cada formação com qualidade, do primeiro ao último módulo.
               </p>
             </div>
             <div className="flex flex-col gap-6 py-6 px-2 border-b border-b-line sm:grid sm:grid-cols-[200px_1fr]">
@@ -146,9 +159,8 @@ export default function Home() {
                 <span className="w-2 h-2 rounded-full shrink-0 bg-cyan"></span>
                 <h3 className="font-bold">Integridade</h3>
               </div>
-              <p>
-                Trabalhamos com transparência, ética e responsabilidade em cada
-                turma e em cada parceria.
+              <p className="max-w-[60ch] text-ink-soft">
+                Trabalhamos com transparência, ética e responsabilidade em cada turma e em cada parceria.
               </p>
             </div>
             <div className="flex flex-col gap-6 py-6 px-2 border-b border-b-line sm:grid sm:grid-cols-[200px_1fr]">
@@ -156,9 +168,8 @@ export default function Home() {
                 <span className="w-2 h-2 rounded-full shrink-0 bg-red"></span>
                 <h3 className="font-bold">Inovação</h3>
               </div>
-              <p>
-                Procuramos novas formas de ensinar e de desenvolver
-                competências.
+              <p className="max-w-[60ch] text-ink-soft">
+                Procuramos novas formas de ensinar e de desenvolver competências.
               </p>
             </div>
             <div className="flex flex-col gap-6 py-6 px-2 border-b border-b-line sm:grid sm:grid-cols-[200px_1fr]">
@@ -166,9 +177,8 @@ export default function Home() {
                 <span className="w-2 h-2 rounded-full shrink-0 bg-blue"></span>
                 <h3 className="font-bold">Prática</h3>
               </div>
-              <p>
-                Acreditamos que conhecimento precisa de aplicação — por isso
-                formamos fazendo.
+              <p className="max-w-[60ch] text-ink-soft">
+                Acreditamos que conhecimento precisa de aplicação — por isso formamos fazendo.
               </p>
             </div>
             <div className="flex flex-col gap-6 py-6 px-2 border-b border-b-line sm:grid sm:grid-cols-[200px_1fr]">
@@ -176,9 +186,8 @@ export default function Home() {
                 <span className="w-2 h-2 rounded-full shrink-0 bg-cyan"></span>
                 <h3 className="font-bold">Inclusão</h3>
               </div>
-              <p>
-                Queremos tornar a formação acessível a diferentes públicos e
-                realidades.
+              <p className="max-w-[60ch] text-ink-soft">
+                Queremos tornar a formação acessível a diferentes públicos e realidades.
               </p>
             </div>
             <div className="flex flex-col gap-6 py-6 px-2 border-b border-b-line sm:grid sm:grid-cols-[200px_1fr]">
@@ -186,9 +195,8 @@ export default function Home() {
                 <span className="w-2 h-2 rounded-full shrink-0 bg-red"></span>
                 <h3 className="font-bold">Impacto</h3>
               </div>
-              <p>
-                O nosso sucesso mede-se também pelas vidas que conseguimos
-                transformar.
+              <p className="max-w-[60ch] text-ink-soft">
+                O nosso sucesso mede-se também pelas vidas que conseguimos transformar.
               </p>
             </div>
             <div className="flex flex-col gap-6 py-6 px-2 border-b border-b-line sm:grid sm:grid-cols-[200px_1fr]">
@@ -196,7 +204,7 @@ export default function Home() {
                 <span className="w-2 h-2 rounded-full shrink-0 bg-blue" ></span>
                 <h3 className="font-bold">Legado</h3>
               </div>
-              <p>
+              <p className="max-w-[60ch] text-ink-soft">
                 Formamos hoje pensando no impacto que vai permanecer amanhã.
               </p>
             </div>
@@ -204,7 +212,9 @@ export default function Home() {
         </div>
       </section>
 
-      <Courses />
+      <section id="cursos">
+        <Courses />
+      </section>
       
       <Owner />
 
@@ -214,7 +224,7 @@ export default function Home() {
             <p className="text-paper">Fale connosco para saber mais sobre as próximas turmas, parcerias ou como levar o Centro à sua instituição.</p>
             <div className="flex w-full flex-wrap gap-5 items-center justify-center mt-5">
                 <Link to="/contacto" className="flex items-center justify-center py-3 px-6 bg-ink text-paper font-medium"> Ir para a Página de contacto </Link>
-                <Link to={whatsapp} className="flex items-center justify-center py-3 px-6 text-paper border border-paper font-medium"> Falar no Whatsapp </Link>
+                <Link to={whatsapp} className="flex items-center justify-center py-3 px-6 text-paper border border-paper font-medium" target="_blank"> Falar no Whatsapp </Link>
             </div>
         </div>
       </section>

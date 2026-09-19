@@ -2,7 +2,7 @@
 export default function Owner() {
   return (
     <section className="bg-ink flex flex-col px-8 py-20">
-        <div className="flex flex-col gap-9 sm:flex sm:flex-row">
+        <div className="flex flex-col gap-9 max-w-6xl my-0 mx-auto sm:flex sm:flex-row">
             <div className="">
                 <img src="/francisco.png" alt="" />
             </div>

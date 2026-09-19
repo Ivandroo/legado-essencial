@@ -54,7 +54,7 @@ function Hero() {
   return (
     <section className="bg-[url('/fundo.jpg')] bg-center bg-cover bg-no-repeat min-h-[80vh]">
       <div className="backdrop-blur-xs bg-black/30">
-        <div className="flex flex-col items-center gap-4 justify-between min-h-[80vh] px-8 py-16 sm:grid sm:grid-cols-2">
+        <div className="flex flex-col w-full max-w-6xl my-0 mx-auto items-center gap-4 justify-between min-h-[80vh] px-8 py-16 sm:grid sm:grid-cols-2">
           <div className="flex flex-col gap-4">
             <h1 className="text-[clamp(42px,5.4vw,74px)] text-paper font-medium font-anto">
               Formar vozes que <span className="text-blue">transformam</span>{" "}

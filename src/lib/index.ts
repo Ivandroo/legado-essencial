@@ -1,3 +1,5 @@
+export const ikigai = "https://wa.me/244947657405"
+
 export const cursos = [
   {
     id: "oratoria",
@@ -22,6 +24,7 @@ export const cursos = [
     data: "4 de Outubro",
     vagasTotal: 25,
     vagasRestantes: 14,
+    imagem: "https://img.magnific.com/fotos-gratis/feche-as-pessoas-aprendendo-juntas-no-escritorio_23-2149300718.jpg?ga=GA1.1.411943744.1778598444&semt=ais_hybrid&w=740&q=80",
   },
   {
     id: "empreendedorismo",
@@ -45,6 +48,7 @@ export const cursos = [
     data: "11 de Outubro",
     vagasTotal: 30,
     vagasRestantes: 20,
+    imagem: "https://images.pexels.com/photos/10376251/pexels-photo-10376251.jpeg?_gl=1*1j6b2zh*_ga*MzgxNzIwMjUuMTc4MzAyMDU0MQ..*_ga_8JE65Q40S6*czE3ODk4MzYyOTAkbzQkZzEkdDE3ODk4MzYzNjEkajU5JGwwJGgw"
   },
   {
     id: "marketing",
@@ -69,6 +73,7 @@ export const cursos = [
     data: "18 de Outubro",
     vagasTotal: 25,
     vagasRestantes: 25,
+    imagem: "https://images.pexels.com/photos/7710150/pexels-photo-7710150.jpeg?_gl=1*z2se7*_ga*MzgxNzIwMjUuMTc4MzAyMDU0MQ..*_ga_8JE65Q40S6*czE3ODk4MzYyOTAkbzQkZzEkdDE3ODk4MzY2NjIkajYwJGwwJGgw"
   },
   {
     id: "gestao-projectos",
@@ -92,6 +97,7 @@ export const cursos = [
     data: "25 de Outubro",
     vagasTotal: 20,
     vagasRestantes: 9,
+    imagem: "https://images.pexels.com/photos/7605981/pexels-photo-7605981.jpeg?_gl=1*dtn9pt*_ga*MzgxNzIwMjUuMTc4MzAyMDU0MQ..*_ga_8JE65Q40S6*czE3ODk4MzYyOTAkbzQkZzEkdDE3ODk4MzY3OTYkajU5JGwwJGgw"
   },
   {
     id: "tv-radio",
@@ -116,5 +122,6 @@ export const cursos = [
     data: "1 de Novembro",
     vagasTotal: 20,
     vagasRestantes: 20,
+    imagem: "https://images.pexels.com/photos/6950232/pexels-photo-6950232.jpeg"
   },
 ];
