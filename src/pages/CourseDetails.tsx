@@ -13,7 +13,7 @@ export default function CoursesDetails() {
   return (
     <section>
       <div className="bg-studio-3 flex flex-col ">
-        <div className="flex flex-col w-full max-w-6xl px-8 py-14 my-0 mx-auto gap-4 sm:px-0">
+        <div className="flex flex-col w-full max-w-6xl px-8 py-14 my-0 mx-auto gap-4">
           <Link
             to="/#cursos"
             className="flex gap-2 text-red text-xs items-center border border-ink-soft rounded-full w-fit px-3 py-2"
